@@ -1,0 +1,17 @@
+{
+  "hash": "90294a770a8ea44912e08b15d16eecd8",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Project Title\nauthor: W. Cools\ndate: last-modified\npublished-title: \"Rendered\"\nexecute:\n  echo: FALSE\n  message: FALSE\n  warning: FALSE\n---\n\n::: {.callout-important .disclaimer title='Disclaimer'}\nCurrent draft describes work in progress and its content should be treated as such.  \nThe researcher should exhibit the necessary skepticism to ensure the analyses are appropriate.  \nR version 4\\.5\\.2 \\(2025\\-10\\-31 ucrt\\)\n:::\n\n\n::: {.cell layout-align=\"center\"}\n\n:::\n\n\n\n::: {.cell layout-align=\"center\"}\n\n:::\n\n\n## Data\n\n\n::: {.cell layout-align=\"center\"}\n\n:::\n\n\n\n::: {.cell layout-align=\"center\"}\n\n:::\n\n\n## Analysis\n\n## Conclusion\n\n<!-- end of the line -->\n\n\n::: {.cell layout-align=\"center\"}\n\n:::\n\n ",
+    "supporting": [
+      "template_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": null,
+    "postProcess": false
+  }
+}

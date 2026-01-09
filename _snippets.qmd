@@ -1,0 +1,38 @@
+---
+title: Snippets
+author: W. Cools
+date: last-modified
+published-title: "Rendered"
+format: draft-template-html
+execute:
+  echo: FALSE
+  message: FALSE
+  warning: FALSE
+---
+
+Current quarto file contains a few notes on using the template and offers some snippets of R code for your convenience.
+
+Folder content:  
+_xtra folder: square logo and scss file for formatting html.  
+_quarto.yml file: project specific formatting for both html and pdf.  
+
+## Snippets
+
+The knitr::purl extracts R code from a quarto file.  
+That R code can be sourced.
+
+```{r}
+#| label: if_qmd_to_r
+#| eval: false
+prjct <- 'name_of_qmd_file_to_turn_into_r'
+knitr::purl(paste0(prjct,".qmd"), output = paste0(prjct,".r"))
+source(paste0(prjct,".r"))
+```
+
+Quarto files can be run from terminal, but also from within R with the system().
+
+```{r}
+#| eval: false
+prjct <- 'name_of_qmd_file_to_run_from_within_r'
+system(paste0('quarto render ',prjct,'.qmd'))
+```
