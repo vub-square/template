@@ -9,16 +9,17 @@ execute:
   warning: FALSE
 ---
 
-::: {.callout-important .disclaimer title='Disclaimer'}
-Current draft describes work in progress and its content should be treated as such.  
-The researcher should exhibit the necessary skepticism to ensure the analyses are appropriate.  
-`{r} R.version.string`
-:::
+<!-- set up -->
 
 ```{r}
 #| label: x_identification
 #| echo: false
-prjct <- c(name='name',label='label')
+
+# name <- "project name"		# CHANGE or get folder name
+# label <- "project label"
+
+prjct <- c(name=ifelse(exists('name'),name,basename(here::here())),
+	label=ifelse(exists('label'),label,"no label"))
 mydata <- 'data.sav'
 mydict <- 'dictionary.xlsx'
 ```
@@ -29,6 +30,14 @@ mydict <- 'dictionary.xlsx'
 pckgs <- c('tidyverse','gt')
 donotshow <- purrr::map(pckgs, library, character.only=TRUE)
 ```
+
+::: {.callout-important .disclaimer title='Disclaimer'}
+Current draft describes work in progress and its content should be treated as such.  
+The researcher should exhibit the necessary skepticism to ensure the analyses are appropriate.  
+`{r} R.version.string`
+:::
+
+<!-- body -->
 
 ## Data
 
@@ -50,10 +59,13 @@ if(file.exists(.dta)) load(.dta)
 
 ## Conclusion
 
-<!-- end of the line -->
+<!-- end -->
 
 ```{r}
 #| label: save_all
-save.image(paste0('Γ_image_',strftime(Sys.time(), format = "%y-%m-%d"),'.RData'))
+save.image(paste0('Γ_image_',
+	gsub(' ','_',prjct[['name']]),'_',
+	strftime(Sys.time(), 
+	format = "%y-%m-%d"),'.RData'))
 ```
  
