@@ -3,7 +3,6 @@ title: Snippets
 author: W. Cools
 date: last-modified
 published-title: "Rendered"
-format: draft-template-html
 execute:
   echo: FALSE
   message: FALSE
