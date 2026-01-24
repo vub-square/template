@@ -62,16 +62,7 @@ if(file.exists(.dta)) load(.dta)
 <!-- end -->
 
 ```{r}
-#| label: save_all
-save.image(paste0('Γ_image_',
-	gsub(' ','_',prjct[['name']]),'_',
-	strftime(Sys.time(), 
-	format = "%y-%m-%d"),'.RData'))
-```
-
-```{r}
 #| label: save_image
 time_image <- strftime(Sys.time(), format = "%y-%m-%d %H:%M")
 save.image(paste0(prjct[['name']],'.IMAGE.RData'))
 ```
- 
