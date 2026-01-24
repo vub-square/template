@@ -15,7 +15,7 @@ execute:
 #| label: x_identification
 #| echo: false
 
-# name <- "project name"		# CHANGE or get folder name
+name <- "project name"		# CHANGE or get folder name
 # label <- "project label"
 
 prjct <- c(name=ifelse(exists('name'),name,basename(here::here())),
@@ -67,5 +67,11 @@ save.image(paste0('Γ_image_',
 	gsub(' ','_',prjct[['name']]),'_',
 	strftime(Sys.time(), 
 	format = "%y-%m-%d"),'.RData'))
+```
+
+```{r}
+#| label: save_image
+time_image <- strftime(Sys.time(), format = "%y-%m-%d %H:%M")
+save.image(paste0(prjct[['name']],'.IMAGE.RData'))
 ```
  
