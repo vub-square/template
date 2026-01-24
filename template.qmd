@@ -15,7 +15,7 @@ execute:
 #| label: x_identification
 #| echo: false
 
-name <- "project name"		# CHANGE or get folder name
+# name <- "project name"		# CHANGE or get folder name
 # label <- "project label"
 
 prjct <- c(name=ifelse(exists('name'),name,basename(here::here())),
